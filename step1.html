@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <link rel="icon" href="favicon.png">
+    <meta charset="utf-8">
+    <script async custom-element="amp-image-slider" src="https://cdn.ampproject.org/v0/amp-image-slider-0.1.js"></script>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="tutorials.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tim Nguyen">
+    <meta name="description" content="Electronics Club ">
+    <meta name="keywords" content="HTML, Lessons, Electroncis Club">
+    <title>Tim Nguyen </title>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+    html, body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #F2F3F7;
+    }
+    .demo-card-widex.mdl-card {
+      position: relative;
+      top: 50px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      opacity: 0;
+    }
+    .demo-card-wide.mdl-card {
+      position: relative;
+      top: 100px;
+      border-radius: 4px;
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      border-radius: 25px;
+      background: #F2F3F7;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+    .demo-card-wide1.mdl-card {
+      position: relative;
+      top: 150px;
+      max-width: 1000px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      background: #F2F3F7;
+      border-radius: 25px;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+    .demo-card-wide2.mdl-card {
+      position: relative;
+      top: 200px;
+      max-width: 1000px;
+      bottom: 20px;
+      border-radius: 4px;
+      background: #F2F3F7;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      border-radius: 25px;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+    .demo-card-wide3.mdl-card {
+      position: relative;
+      top: 250px;
+      max-width: 1000px;
+      bottom: 20px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      border-radius: 25px;
+      background: #F2F3F7;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+    .demo-card-wide4.mdl-card {
+      position: relative;
+      top: 300px;
+      max-width: 1000px;
+      bottom: 20px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      background: #F2F3F7;
+      display: flex;
+      border-radius: 25px;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+    .demo-card-wide5.mdl-card {
+      position: relative;
+      top: 350px;
+      max-width: 1000px;
+      bottom: 30px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      background: #1B9DE2;
+      display: flex;
+      border-radius: 25px;
+      box-shadow:
+      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    }
+
+    .demo-card-wide90.mdl-card {
+      position: relative;
+      top: 450px;
+      bottom: 20px;
+      border-radius: 4px;
+      width: 90%;
+      margin: auto;
+      display: flex;
+      border-radius: 25px;
+      opacity: 0;
+    }
+    .demo-card-wide1 > .mdl-card__title {
+      color: #fff;
+      height: 135px;
+      display: flex;
+      background: #1B9DE2;
+    }
+    .demo-card-wide2 > .mdl-card__title {
+      color: #fff;
+      height: 135px;
+      display: flex;
+      background: #1B9DE2;
+    }
+    .demo-card-wide3 > .mdl-card__title {
+      color: #fff;
+      height: 135px;
+      display: flex;
+      background: #1B9DE2;
+    }
+    .demo-card-wide4 > .mdl-card__title {
+      color: #fff;
+      height: 135px;
+      display: flex;
+      background: #1B9DE2;
+    }
+    .demo-card-wide5 > .mdl-card__title {
+      color: #fff;
+      height: 140px;
+      display: flex;
+      background: #1B9DE2;
+    }
+    .demo-card-wide > .mdl-card__title {
+      color: #fff;
+      height: 135px;
+      display: flex;
+      font-weight: bold;
+      background: #1B9DE2;
+    }
+    .demo-card-wide > .mdl-card__menu {
+      color: #fff;
+    }
+    #box{
+      opacity: 1.0;
+      height: 20%;
+      width: 100%;
+      bottom: 0px;
+    }
+    a {
+      text-decoration: none;
+      color:inherit;
+    }
+    .boxa {
+      position: fixed;
+      height: 100%;
+      width: 50%;
+      top: 0px;
+      left: 0;
+    }
+    .boxb {
+      position: absolute;
+      height: 100%;
+      width: 50%;
+      top: 0px;
+      right: 0;
+    }
+    h1 {
+      font-size: 27.5px;
+      text-align: center;
+      letter-spacing: 3px;
+    }
+    .mdl-card {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      font-size: 16px;
+      font-weight: 400;
+      min-height: 200px;
+      overflow: hidden;
+      width: 330px;
+      z-index: 1;
+      position: relative;
+      background: rgb(255,255,255);
+      border-radius: 2px;
+      box-sizing: border-box; }
+
+    .mdl-card__media {
+      background-color: rgb(255,64,129);
+      background-repeat: repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      background-origin: padding-box;
+      background-attachment: scroll;
+      box-sizing: border-box; }
+
+    .mdl-card__title {
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      color: rgb(0,0,0);
+      display: block;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: stretch;
+          -ms-flex-pack: stretch;
+              justify-content: stretch;
+      line-height: normal;
+      padding: 16px 16px;
+      -webkit-perspective-origin: 165px 56px;
+              perspective-origin: 165px 56px;
+      -webkit-transform-origin: 165px 56px;
+              transform-origin: 165px 56px;
+      box-sizing: border-box; }
+      .mdl-card__title.mdl-card--border {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+    .mdl-card__title-text {
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end;
+      color: inherit;
+      display: block;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: normal;
+      overflow: hidden;
+      -webkit-transform-origin: 149px 48px;
+              transform-origin: 149px 48px;
+      margin: 0; }
+
+    .mdl-card__subtitle-text {
+      font-size: 14px;
+      color: rgba(0,0,0, 0.54);
+      margin: 0; }
+
+    .mdl-card__supporting-text {
+      color: rgba(0,0,0, 0.54);
+      font-size: 1rem;
+      line-height: 18px;
+      overflow: hidden;
+      padding: 16px 16px;
+      width: 90%; }
+      .mdl-card__supporting-text.mdl-card--border {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+    .mdl-card__actions {
+      font-size: 16px;
+      line-height: normal;
+      width: 100%;
+      background-color: transparent;
+      padding: 8px;
+      box-sizing: border-box; }
+      .mdl-card__actions.mdl-card--border {
+        border-top: 1px solid rgba(0, 0, 0, 0.1); }
+
+    .mdl-card--expand {
+      -webkit-flex-grow: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; }
+
+    .mdl-card__menu {
+      position: absolute;
+      right: 16px;
+      top: 16px; }
+      .label {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 5rem;
+    padding: 1rem 0;
+    text-align: center;
+    font-weight: bold;
+  }
+  .label-left-center {
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+  }
+  .label-right-center {
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
+    code {
+    }
+    .codebox {
+    }
+    textarea {
+      border: none;
+      resize: none;
+    }
+    </style>
+  </head>
+  <body>
+<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Step 1: What is HTML?</b></h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    HTML is the underlying language that most websites use. HTML stands for <b><u>H</u></b>yper <b><u>T</u></b>ext <b><u>M</u></b>arkup <b><u>L</u></b>anguage. Because it's a markup language, you will <i>not</i> have syntax errors liek in Python or C++. Becuase HTML is the underlying language, you will style your site through CSS.
+
+<amp-image-slider class="triangle-hint" width="300" height="400" layout="responsive">
+<amp-img src="htmlonly.png" alt="HTML only site" layout="fill"></amp-img>
+<amp-img src="htmlcss.png" alt="HTML and CSS site" layout="fill"></amp-img>
+<div first class="label label-left-center">HTML Only</div>
+<div second class="label label-right-center">With CSS</div>
+</amp-image-slider>
+  </div>
+  <div class="mdl-card__menu">
+  </div>
+</div>
+<div class="demo-card-wide1 mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Step 2: What you will need:</b></h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+It is recommended that you hvae these apps installed. If not, you can use Glitch and manually update your Github repo. It is much <i>faster</i> if you use these apps listed below. You may or may not use these tags when creating a website.
+<ul>
+  <li><a href="https://atom.io/">Atom IDE</a></li>
+  <li><a href="https://desktop.github.com/">Github Desktop</a></li>
+</ul>
+  </div>
+</div>
+<div class="demo-card-wide2 mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Step 3: Basic HTML File</b></h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    When coding in HTML, you will need to lay out your page with the basic HTML layout.
+<br>
+<textarea class="codebox" style="resize: none; border: none; border-radius: 15px; background-color: #F2F3F7; border-color: #F2F3F7; box-shadow: inset 4px 4px 2px #cecfd2, inset -4px -4px 2px #ffffff; font-size: 15px; margin: 0 auto; display: block;width:97.5%; margin-right: auto; margin-left: auto;" rows="12" disabled="true">
+
+  <!DOCTYPE html>
+  <html lang="en" dir="ltr">
+    <head>
+      <meta charset="utf-8">
+      <title></title>
+    </head>
+    <body>
+
+    </body>
+    </html>
+</textarea>
+<br>
+Create a document titled <i>index.html</i> and this in. In Atom, simply type HTML and hitting enter will load this for you.
+  </div>
+</div>
+<div class="demo-card-wide3 mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Step 4: Head and Body</b></h2>
+      </div>
+    <div class="mdl-card__supporting-text">
+      In HTML, you have a head and body. In your head, you put info like your CSS in
+      <textarea class="codebox" style="resize: none; border: none; border-radius: 15px; background-color: #F2F3F7; border-color: #F2F3F7; box-shadow: inset 4px 4px 2px #cecfd2, inset -4px -4px 2px #ffffff; font-size: 15px; margin: 0 auto; width:97.5%; margin-right: auto;" rows="2" disabled="true">
+        <style media="screen">
+        </style>
+      </textarea>
+      <br> and also basic info about the website using
+      <textarea class="codebox" style="resize: none; border: none; border-radius: 15px; background-color: #F2F3F7; border-color: #F2F3F7; box-shadow: inset 4px 4px 2px #cecfd2, inset -4px -4px 2px #ffffff; font-size: 15px; margin: 0 auto; width:97.5%; margin-right: auto;" rows="1" disabled="true">         <meta>
+      </textarea> <br>
+      and much more. Your body is where you put your main web content in like <code>a</code> tags, <code>div</code> tags, and much more.
+ </div>
+</div>
+<div class="demo-card-wide4 mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Step 5: HTML Table (W3Schools)</b></h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+    Here's a list of HTML tags. Most tag begin with &lt;&gt; and end with &lt;/&gt;, but there are some exceptions. Here are a list of HTML tags from W3Schools. Clicking on each tag leads you to the W3Schools lesson. <br> <br>
+                <table class="w3-table-all notranslate">
+                <tr>
+                <th style="width:25%">Tag</th>
+                <th>Description</th>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_comment.asp">&lt;!--...--&gt;</a></td>
+                <td>Defines a comment</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_doctype.asp">&lt;!DOCTYPE&gt;</a>&nbsp;</td>
+                <td>Defines the document type</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_a.asp">&lt;a&gt;</a></td>
+                <td>Defines a hyperlink</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_abbr.asp">&lt;abbr&gt;</a></td>
+                <td>Defines an abbreviation or an acronym</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_address.asp">&lt;address&gt;</a></td>
+                <td>Defines contact information for the author/owner of a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_area.asp">&lt;area&gt;</a></td>
+                <td>Defines an area inside an image-map</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_article.asp">&lt;article&gt;</a></td>
+                <td>Defines an article</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_aside.asp">&lt;aside&gt;</a></td>
+                <td>Defines content aside from the page content</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_audio.asp">&lt;audio&gt;</a></td>
+                <td>Defines sound content</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_b.asp">&lt;b&gt;</a></td>
+                <td>Defines bold text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_base.asp">&lt;base&gt;</a></td>
+                <td>Specifies the base URL/target for all relative URLs in a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_bdi.asp">&lt;bdi&gt;</a></td>
+                <td>Isolates a part of text that might be formatted in a different direction
+                from other text outside it</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_bdo.asp">&lt;bdo&gt;</a></td>
+                <td>Overrides the current text direction</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_blockquote.asp">&lt;blockquote&gt;</a></td>
+                <td>Defines a section that is quoted from another source</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_body.asp">&lt;body&gt;</a></td>
+                <td>Defines the document's body</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_br.asp">&lt;br&gt;</a></td>
+                <td>Defines a single line break</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_button.asp">&lt;button&gt;</a></td>
+                <td>Defines a clickable button</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_canvas.asp">&lt;canvas&gt;</a></td>
+                <td>Used to draw graphics, on the fly, via scripting (usually JavaScript)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_caption.asp">&lt;caption&gt;</a></td>
+                <td>Defines a table caption</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_cite.asp">&lt;cite&gt;</a></td>
+                <td>Defines the title of a work</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_code.asp">&lt;code&gt;</a></td>
+                <td>Defines a piece of computer code</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_col.asp">&lt;col&gt;</a></td>
+                <td>Specifies column properties for each column within a &lt;colgroup&gt; element&nbsp;</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_colgroup.asp">&lt;colgroup&gt;</a></td>
+                <td>Specifies a group of one or more columns in a table for formatting</td>
+                </tr>
+                  <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_data.asp">&lt;data&gt;</a></td>
+                <td>Links the given content with a machine-readable translation</td>
+                  </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_datalist.asp">&lt;datalist&gt;</a></td>
+                <td>Specifies a list of pre-defined options for input controls</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_dd.asp">&lt;dd&gt;</a></td>
+                <td>Defines a description/value of a term in a description list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_del.asp">&lt;del&gt;</a></td>
+                <td>Defines text that has been deleted from a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_details.asp">&lt;details&gt;</a></td>
+                <td>Defines additional details that the user can view or hide</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_dfn.asp">&lt;dfn&gt;</a></td>
+                <td>Represents the defining instance of a term</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_dialog.asp">&lt;dialog&gt;</a></td>
+                <td>Defines a dialog box or window</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_div.asp">&lt;div&gt;</a></td>
+                <td>Defines a section in a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_dl.asp">&lt;dl&gt;</a></td>
+                <td>Defines a description list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_dt.asp">&lt;dt&gt;</a></td>
+                <td>Defines a term/name in a description list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_em.asp">&lt;em&gt;</a></td>
+                <td>Defines emphasized text&nbsp;</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_embed.asp">&lt;embed&gt;</a></td>
+                <td>Defines a container for an external (non-HTML) application</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_fieldset.asp">&lt;fieldset&gt;</a></td>
+                <td>Groups related elements in a form</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_figcaption.asp">&lt;figcaption&gt;</a></td>
+                <td>Defines a caption for a &lt;figure&gt; element</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_figure.asp">&lt;figure&gt;</a></td>
+                <td>Specifies self-contained content</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_footer.asp">&lt;footer&gt;</a></td>
+                <td>Defines a footer for a document or section</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_form.asp">&lt;form&gt;</a></td>
+                <td>Defines an HTML form for user input</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_hn.asp">&lt;h1&gt; to &lt;h6&gt;</a></td>
+                <td> Defines HTML headings</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_head.asp">&lt;head&gt;</a></td>
+                <td>Defines information about the document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_header.asp">&lt;header&gt;</a></td>
+                <td>Defines a header for a document or section</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_hr.asp">&lt;hr&gt;</a></td>
+                <td> Defines a thematic change in the content</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_html.asp">&lt;html&gt;</a></td>
+                <td>Defines the root of an HTML document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_i.asp">&lt;i&gt;</a></td>
+                <td>Defines a part of text in an alternate voice or mood</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_iframe.asp">&lt;iframe&gt;</a></td>
+                <td>Defines an inline frame</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_img.asp">&lt;img&gt;</a></td>
+                <td>Defines an image</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_input.asp">&lt;input&gt;</a></td>
+                <td>Defines an input control</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_ins.asp">&lt;ins&gt;</a></td>
+                <td>Defines a text that has been inserted into a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_kbd.asp">&lt;kbd&gt;</a></td>
+                <td>Defines keyboard input</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_label.asp">&lt;label&gt;</a></td>
+                <td>Defines a label&nbsp;for an &lt;input&gt; element</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_legend.asp">&lt;legend&gt;</a></td>
+                <td>Defines a caption for a &lt;fieldset&gt; element</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_li.asp">&lt;li&gt;</a></td>
+                <td>Defines a list item</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_link.asp">&lt;link&gt;</a></td>
+                <td>Defines the relationship between a document and an external resource (most
+                used to link to style sheets)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_main.asp">&lt;main&gt;</a></td>
+                <td>Specifies the main content of a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_map.asp">&lt;map&gt;</a></td>
+                <td>Defines a client-side image-map</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_mark.asp">&lt;mark&gt;</a></td>
+                <td>Defines marked/highlighted text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_meta.asp">&lt;meta&gt;</a></td>
+                <td>Defines metadata about an HTML document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_meter.asp">&lt;meter&gt;</a></td>
+                <td>Defines a scalar measurement within a known range (a gauge)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_nav.asp">&lt;nav&gt;</a></td>
+                <td>Defines navigation links</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_noscript.asp">&lt;noscript&gt;</a></td>
+                <td>Defines an alternate content for users that do not support
+                client-side scripts</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_object.asp">&lt;object&gt;</a></td>
+                <td>Defines an embedded object</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_ol.asp">&lt;ol&gt;</a></td>
+                <td>Defines an ordered list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_optgroup.asp">&lt;optgroup&gt;</a></td>
+                <td>Defines a group of related options in a drop-down list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_option.asp">&lt;option&gt;</a></td>
+                <td>Defines an option in a drop-down list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_output.asp">&lt;output&gt;</a></td>
+                <td>Defines the result of a calculation</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_p.asp">&lt;p&gt;</a></td>
+                <td>Defines a paragraph</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_param.asp">&lt;param&gt;</a></td>
+                <td>Defines a parameter for an object</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_picture.asp">&lt;picture&gt;</a></td>
+                <td>Defines a container for multiple image resources</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_pre.asp">&lt;pre&gt;</a></td>
+                <td>Defines preformatted text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_progress.asp">&lt;progress&gt;</a></td>
+                <td>Represents the progress of a task</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_q.asp">&lt;q&gt;</a></td>
+                <td>Defines a short quotation</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_rp.asp">&lt;rp&gt;</a></td>
+                <td>Defines what to show in browsers that do not support ruby annotations</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_rt.asp">&lt;rt&gt;</a></td>
+                <td>Defines an explanation/pronunciation of characters (for East Asian
+                typography)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_ruby.asp">&lt;ruby&gt;</a></td>
+                <td>Defines a ruby annotation (for East Asian typography)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_s.asp">&lt;s&gt;</a></td>
+                <td>Defines text that is no longer correct</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_samp.asp">&lt;samp&gt;</a></td>
+                <td>Defines sample output from a computer program</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_script.asp">&lt;script&gt;</a></td>
+                <td>Defines a client-side script</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_section.asp">&lt;section&gt;</a></td>
+                <td>Defines a section in a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_select.asp">&lt;select&gt;</a></td>
+                <td>Defines a drop-down list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_small.asp">&lt;small&gt;</a></td>
+                <td>Defines smaller text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_source.asp">&lt;source&gt;</a></td>
+                <td>Defines multiple media resources for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_span.asp">&lt;span&gt;</a></td>
+                <td>Defines a section in a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_strong.asp">&lt;strong&gt;</a></td>
+                <td>Defines important text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_style.asp">&lt;style&gt;</a></td>
+                <td>Defines style information for a document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_sub.asp">&lt;sub&gt;</a></td>
+                <td>Defines subscripted text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_summary.asp">&lt;summary&gt;</a></td>
+                <td>Defines a visible heading for a &lt;details&gt; element</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_sup.asp">&lt;sup&gt;</a></td>
+                <td>Defines superscripted text</td>
+                </tr>
+                  <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_svg.asp">&lt;svg&gt;</a></td>
+                <td>Defines a container for SVG graphics</td>
+                  </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_table.asp">&lt;table&gt;</a></td>
+                <td>Defines a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_tbody.asp">&lt;tbody&gt;</a></td>
+                <td>Groups the body content in a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_td.asp">&lt;td&gt;</a></td>
+                <td>Defines a cell in a table</td>
+                </tr>
+                  <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_template.asp">&lt;template&gt;</a></td>
+                <td>Defines a template</td>
+                  </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_textarea.asp">&lt;textarea&gt;</a></td>
+                <td>Defines a multiline input control (text area)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_tfoot.asp">&lt;tfoot&gt;</a></td>
+                <td>Groups the footer content in a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_th.asp">&lt;th&gt;</a></td>
+                <td>Defines a header cell in a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_thead.asp">&lt;thead&gt;</a></td>
+                <td>Groups the header content in a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_time.asp">&lt;time&gt;</a></td>
+                <td>Defines a date/time</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_title.asp">&lt;title&gt;</a></td>
+                <td>Defines a title for the document</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_tr.asp">&lt;tr&gt;</a></td>
+                <td>Defines a row in a table</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_track.asp">&lt;track&gt;</a></td>
+                <td>Defines text tracks for media elements (&lt;video&gt; and &lt;audio&gt;)</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_u.asp">&lt;u&gt;</a></td>
+                <td>Defines text that should be stylistically different from normal text</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_ul.asp">&lt;ul&gt;</a></td>
+                <td>Defines an unordered list</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_var.asp">&lt;var&gt;</a></td>
+                <td>Defines a variable</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_video.asp">&lt;video&gt;</a></td>
+                <td>Defines a video or movie</td>
+                </tr>
+                <tr>
+                <td><a href="https://www.w3schools.com/TAGS/tag_wbr.asp">&lt;wbr&gt;</a></td>
+                <td>Defines a possible line-break</td>
+                </tr>
+                </table>
+  </div>
+</div>
+<a href="step2.html">
+<div class="demo-card-wide5 mdl-card mdl-shadow--2dp">
+  <div class="mdl-card__title">
+    <h2 class="mdl-card__title-text"><b>Next Up: Styling with CSS</b></h2>
+  </div>
+  <div class="mdl-card__supporting-text">
+  </div>
+</div>
+</a>
+<div class="demo-card-wide90 mdl-card mdl-shadow--2dp">
+</div>
+  </body>
+</html>

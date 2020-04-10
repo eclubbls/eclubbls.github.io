@@ -1,0 +1,158 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Eclub BLS</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      html, body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #F2F3F7;
+      }
+      .first {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        position: relative;
+        top: 10vh;
+        margin: 0 auto;
+        height: 80vh;
+        width: 80vw;
+        max-width: 700px;
+        border-radius: 30px;
+        background: #F2F3F7;
+        box-shadow:  24px 24px 48px #babbbe,
+                     -24px -24px 48px #ffffff;
+        margin-bottom: 50px;
+        overflow: auto;
+      }
+      a {
+        text-decoration: none;
+        color:inherit;
+      }
+      #svg{
+        position: absolute;
+        bottom: 0%;
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        left: 0;
+        right: 0;
+        color: #1B9DE2;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 65px;
+        text-align: center;
+        border-radius: 0px 0px 30px 30px;
+      }
+      .ghost {
+        postion: relative;
+        height: 100px;
+        width: 120;
+        margin-left:auto;
+        margin-right:auto;
+        background: #1B9DE2;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        overflow: auto;
+        box-shadow:  6px 6px 12px #babbbe,
+                     -6px -6px 12px #ffffff;
+      }
+      .top {
+        border-radius: 30px 30px 0px 0px;
+      }
+      h1 {
+        padding-left: 15px;
+        font-size: 50px;
+      }
+      .button {
+        left: 20px;
+        position: relative;
+        top: 10px;
+        height: 60px;
+        width: 180px;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius: 20px;
+        text-align: center;
+        background: #1B9DE2;
+        box-shadow:  6px 6px 12px #babbbe,
+                     -6px -6px 12px #ffffff;
+      }
+      .button:hover {
+        box-shadow:  12px 12px 30px #babbbe,
+                     -12px -12px 28px #ffffff;
+      }
+      .button:active {
+        box-shadow:
+            1px 1px 1px rgba( var(--color-light), 1 ),
+            inset -2px -2px 2px rgba( var(--color-light), 0.9),
+            inset -3px -3px 4px rgba( var(--color-light), 0.9),
+            inset -6px -6px 12px rgba( var(--color-light), 0.9),
+            inset -8px -8px 16px rgba( var(--color-light), 0.9),
+            -1px -1px 1px rgba( var(--color-shadow), 0.06 ),
+            inset 2px 2px 2px rgba( var(--color-shadow), 0.08),
+            inset 3px 3px 4px rgba( var(--color-shadow), 0.08),
+            inset 6px 6px 12px rgba( var(--color-shadow), 0.08),
+            inset 8px 8px 16px rgba( var(--color-shadow), 0.08);
+          }
+      h2 {
+        color: white;
+        margin-top: 10.5px;
+        position: relative;
+        font-size: 30px;
+      }
+      p {
+        font-size: 20px;
+        padding-left: 25px;
+        padding-right: 50px;
+      }
+      .cards {
+        postion: relative;
+        height: 50px;
+        width: 40%;
+        margin-left:auto;
+        margin-right:auto;
+        margin-top: 20px;
+        text-align: center;
+        background: #1B9DE2;
+        border-radius: 25px;
+        margin-bottom: 50px;
+        box-shadow:  6px 6px 12px #babbbe,
+                     -6px -6px 12px #ffffff;
+      }
+      .cards:hover {
+        box-shadow:  12px 12px 30px #babbbe,
+                     -12px -12px 28px #ffffff;
+      }
+      button {
+        border: none;
+        outline:none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="font-size: 40px; color:#1B9DE2; margin-bottom: -55px;"> Electronics Club</h1>
+    <div class="first">
+      <svg class="top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#FFCA3A" fill-opacity="1" d="M0,320L26.7,304C53.3,288,107,256,160,250.7C213.3,245,267,267,320,261.3C373.3,256,427,224,480,229.3C533.3,235,587,277,640,256C693.3,235,747,149,800,106.7C853.3,64,907,64,960,64C1013.3,64,1067,64,1120,85.3C1173.3,107,1227,149,1280,149.3C1333.3,149,1387,107,1413,85.3L1440,64L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path>
+      </svg>
+        <h1 style="margin-bottom: -20px;">CSS Basics.</h1>
+        <p>Basics about CSS. <b style="color: red;"> Coming Soon.</b></p>
+        <a href="tutorials.html" class="cards">
+        <h2>Back</h2>
+        </a>
+      <svg id="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#1B9DE2" fill-opacity="1" d="M0,320L26.7,304C53.3,288,107,256,160,250.7C213.3,245,267,267,320,261.3C373.3,256,427,224,480,229.3C533.3,235,587,277,640,256C693.3,235,747,149,800,106.7C853.3,64,907,64,960,64C1013.3,64,1067,64,1120,85.3C1173.3,107,1227,149,1280,149.3C1333.3,149,1387,107,1413,85.3L1440,64L1440,320L1413.3,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z"></path>
+      </svg>
+    </div>
+  </body>
+</html>
